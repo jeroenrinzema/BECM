@@ -9,9 +9,7 @@ BECM stands for:
 
 Below are all 4 types described and their best practices. All examples are written in [`SASS`](http://sass-lang.com/).
 
-## 🚧 Before you start
-
-It is advised to create a prefix for your project. In the examples below did i use the prefix `becm` as an example.
+> 🚧 It is advised to create a prefix for your project. In the examples below did i use the prefix `becm` as an example.
 
 ## Blocks
 
