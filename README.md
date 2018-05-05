@@ -13,7 +13,7 @@ Below are all 4 types described and their best practices. All examples are writt
 
 ## Blocks
 
-A block is a standalone entity that does not depend on any above DOM structure. Blocks can be nested with each other but should not depend on one another.
+A block is a standalone entity that does not depend on any above DOM structure. Blocks can be nested within each other but should not depend on one another.
 
 > It is advised to use a prefix for each block in the examples below do we use the prefix `becm` as an example
 
@@ -28,11 +28,11 @@ A block is a standalone entity that does not depend on any above DOM structure. 
 <div class="becm-button"></div>
 ```
 
-## Child Element
+## Element
 
-Sometimes a block contains other elements. These elements are concatenated with the block element seperated by a single underscore (`_`).
+Elements are part of a block. These elements are concatenated with the block element seperated by a single underscore (`_`).
 This isolates the child element and enables us to reuse it later on ([reusing/extending classes](#reusingextending-classes)).
-A child element can contain other child element and so forth.
+A element can contain other elements or mutations and so forth.
 
 **Example**
 
@@ -47,10 +47,10 @@ A child element can contain other child element and so forth.
 <div class="becm-button"><i class="becm-button_icon"></i> Submit</div>
 ```
 
-## Block Modifier
+## Modifier
 
-A block modifier modifies a block and some or all of it's child elements. A block modifier should modify more then one element.
-If you want to create a modifier that modifies only one element, use a [chained modifier](#chainedmodifiers).
+A modifier modifies a block and it's elements. A modifier should always modify more then one element.
+If you want to create a modifier that modifies only the given element, use a [chained modifier](#chainedmodifiers).
 
 Below is a example of the modifier `-large` that changes the `font-size` from `18px` to `24px` of the `becm-button`.
 I also included the generated CSS.
@@ -129,7 +129,7 @@ Every chained modifier should start with one of the following prefixes:
 
 ## Reusing/extending classes
 
-One of the main reasons of using the BECM naming guide is of the reusability that it offers. Every block/child element should be isolated and have the plausibility to be used as a standalone element. Below are we creating a `form` and `contact` block where of the `input` fields can be reused without `.becm-form` or `.becm-contact`.
+One of the main reasons of using the BECM naming guide is of the reusability that it offers. Every block/child element should be isolated and have the plausibility to be used as a standalone element. Below are we creating a `form` and `contact` block where the `input` fields can be used in a standalone scenario.
 
 **Example**
 
@@ -160,7 +160,7 @@ One of the main reasons of using the BECM naming guide is of the reusability tha
 <div class="becm-form_input"></div>
 ```
 
-This is a very simple example of how you could reuse the same input field without relying on any previous DOM structure. Below is another example of how you could reuse blocks/child elements with the `@extend` method. `@extend` extends the given class with the scopes class name. Again will we create a small form but will we use the `becm-form_input` as base for `becm-contact_input`.
+This is a very simple example of how you could reuse the same input field without relying on any previous DOM structure. Below is another example of how you could reuse blocks/child elements with the `@extend` method. `@extend` extends the given class with the scope class name. Again will we create a small form but will we use the `becm-form_input` as base for `becm-contact_input`.
 
 **Example**
 
