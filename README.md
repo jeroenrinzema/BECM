@@ -9,7 +9,7 @@ BECM stands for:
 
 Below are all 4 types described and their best practices. All examples are written in [`SASS`](http://sass-lang.com/).
 
-> 🚧 It is advised to create a prefix for your project. In the examples below did i use the prefix `becm` as an example.
+> 🚧 It is advised to create a prefix for your project. In the examples below did I use the prefix `becm` as an example.
 
 ## Blocks
 
@@ -30,9 +30,9 @@ A block is a standalone entity that does not depend on any above DOM structure. 
 
 ## Element
 
-Elements are part of a block. These elements are concatenated with the block element seperated by a single underscore (`_`).
+Elements are part of a block. These elements are concatenated with the block element separated by a single underscore (`_`).
 This isolates the child element and enables us to reuse it later on ([reusing/extending classes](#reusingextending-classes)).
-A element can contain other elements or mutations and so forth.
+An element can contain other elements or mutations and so forth.
 
 **Example**
 
@@ -49,7 +49,7 @@ A element can contain other elements or mutations and so forth.
 
 ## Modifier
 
-A modifier modifies a block and it's elements. A modifier should always modify more then one element.
+A modifier modifies a block and it's elements. A modifier should always modify more than one element.
 If you want to create a modifier that modifies only the given element, use a [chained modifier](#chainedmodifiers).
 
 Below is a example of the modifier `-large` that changes the `font-size` from `18px` to `24px` of the `becm-button`.
@@ -103,9 +103,9 @@ I also included the generated CSS.
 
 ## Chained Modifiers
 
-A chained modifier is a modifier that only changes the style of the given element. Multiple chained modifiers can be applied to a element at the same time.
+A chained modifier is a modifier that only changes the style of the given element. Multiple chained modifiers can be applied to an element at the same time.
 
-> ⚠️ Remember a chained modifier should only change the element it is applied to and not other child element(s).
+> ⚠️ Remember a chained modifier should only change the element it is applied to and not another child element.
 
 Every chained modifier should start with one of the following prefixes:
 `has-`, `is-` or `no-`
@@ -129,7 +129,7 @@ Every chained modifier should start with one of the following prefixes:
 
 ## Reusing/extending classes
 
-One of the main reasons of using the BECM naming guide is of the reusability that it offers. Every block/child element should be isolated and have the plausibility to be used as a standalone element. Below are we creating a `form` and `contact` block where the `input` fields can be used in a standalone scenario.
+One of the main reasons for using the BECM naming guide is the reusability that it offers. Every block/child element should be isolated and have the plausibility to be used as a standalone element. Below are we creating a `form` and `contact` block where the `input` fields can be used in a standalone scenario.
 
 **Example**
 
@@ -160,7 +160,7 @@ One of the main reasons of using the BECM naming guide is of the reusability tha
 <div class="becm-form_input"></div>
 ```
 
-This is a very simple example of how you could reuse the same input field without relying on any previous DOM structure. Below is another example of how you could reuse blocks/child elements with the `@extend` method. `@extend` extends the given class with the scope class name. Again will we create a small form but will we use the `becm-form_input` as base for `becm-contact_input`.
+This is a very simple example of how you could reuse the same input field without relying on any previous DOM structure. Below is another example of how you could reuse blocks/child elements with the `@extend` method. `@extend` extends the given class with the scope class name. Again will we create a small form but will we use the `becm-form_input` as a base for `becm-contact_input`.
 
 **Example**
 
